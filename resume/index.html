@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    .toggle-content {
+      display: none;
+    }
+    .toggle-btn {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>John Doe</h1>
+    <p>Email: john@example.com</p>
+    <p>Phone: 123-456-7890</p>
+    <h2>Education</h2>
+    <p>Bachelor of Science in Computer Science, University of ABC, 2015-2019</p>
+    <h2>Skills</h2>
+    <ul>
+      <li>JavaScript</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>React.js</li>
+      <li>Node.js</li>
+      <li>Git</li>
+    </ul>
+    <h2>Experience</h2>
+    <p>Software Developer Intern, XYZ Company, 2018-2019</p>
+    <p>Developed web applications using React.js and Node.js.</p>
+    <p class="toggle-btn" onclick="toggleVisibility('additional-experience')">Show Additional Experience</p>
+    <div id="additional-experience" class="toggle-content">
+      <p>Frontend Developer, ABC Inc., 2017-2018</p>
+      <p>Designed and implemented user interfaces for client projects.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      var element = document.getElementById(id);
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
